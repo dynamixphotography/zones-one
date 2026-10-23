@@ -23,7 +23,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font:400 16px/1.55 var(--body);overflow-x:hidden;
   background-image:radial-gradient(1200px 600px at 80% -10%,#141b24 0,transparent 60%)}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 .wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
 .ti{background:linear-gradient(180deg,var(--ti1) 10%,var(--ti2) 55%,var(--ti3) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -85,7 +85,7 @@ section{padding:4.5rem 0}
 .list li{display:flex;gap:.7rem;color:var(--text);font-size:.95rem}
 .list li i{font:italic 800 .95rem/1.55 var(--display);color:var(--ice);min-width:1.4rem}
 /* anatomy */
-.anatomy .grid{display:grid;gap:2rem}
+.anatomy .grid,.build .grid{display:grid;gap:2rem}
 .plate{background:var(--plate);border-radius:6px;padding:.6rem;box-shadow:0 20px 60px rgba(0,0,0,.5)}
 .plate img{border-radius:3px;width:100%}
 .plate figcaption{color:#3b4a47;font:600 .72rem/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:.6rem .3rem .2rem}
@@ -138,6 +138,7 @@ footer img{width:120px;border-radius:4px}
   .head{grid-template-columns:1fr 1fr;align-items:end}
   .stage{grid-template-columns:1.35fr 1fr;align-items:start}
   .anatomy .grid{grid-template-columns:1.1fr 1fr;align-items:center}
+  .build .grid{grid-template-columns:.8fr 1.2fr;align-items:center}
   .movement .wrap{grid-template-columns:1.3fr .8fr}
   .tabs{overflow:visible;flex-wrap:wrap}
   footer .wrap{grid-template-columns:auto 1fr auto}
@@ -158,7 +159,7 @@ footer img{width:120px;border-radius:4px}
     <div class="rv">
       <div class="eyebrow">Zones One / AdaptStep</div>
       <h1><span class="ti">The shoe that adapts to you.</span></h1>
-      <p class="lead">Most shoes ask your foot to adapt to them. Zones One flips it. AdaptStep is built to take your shape, hold it, and move with you.</p>
+      <p class="lead">Most shoes ask your foot to adapt to them. Zones One flips it. AdaptStep is a kevlar quilted air blanket that lines the whole interior and conforms to your foot.</p>
       <div class="cta">
         <a class="btn" href="#waitlist">Join the waitlist</a>
         <a class="btn ghost" href="#tech">See how AdaptStep works</a>
@@ -186,7 +187,7 @@ footer img{width:120px;border-radius:4px}
         <div class="eyebrow">The technology</div>
         <h2><span class="ti">AdaptStep, piece by piece.</span></h2>
       </div>
-      <p class="lead">Four systems from the Zones One technical drawings. Pick one. Tap the numbered points on the shoe to see what each part is called and what it does.</p>
+      <p class="lead">Four systems from the Zones One technical drawings, explained in the inventor's words. Pick one. Tap the numbered points on the shoe to see what each part is called.</p>
     </div>
     <div class="tabs" role="tablist" aria-label="AdaptStep systems" id="tabs"></div>
     <div class="stage">
@@ -208,7 +209,7 @@ footer img{width:120px;border-radius:4px}
     <div class="rv">
       <div class="eyebrow">Under the foot</div>
       <h2><span class="ti">A base that wraps around you.</span></h2>
-      <p class="lead" style="margin-top:1rem">From the logo and technology spec: an insole zone, and a pneumatic base that wraps the foot in three directions. Drawn as encapsulated zones, seen in side cross-section.</p>
+      <p class="lead" style="margin-top:1rem">The sole is built to pull heat away from the foot and keep it vented and temperature regulated. Under pressure it molds to take your shape, creates the mold, then supports the foot. The spec drawing shows it as encapsulated zones in side cross-section.</p>
       <div class="stack">
         <div><b>Insole Zone</b><span>Micro Step Technology with a fine-grain support matrix.</span></div>
         <div><b>Bottom Wrap</b><span>The pneumatic base.</span></div>
@@ -220,6 +221,22 @@ footer img{width:120px;border-radius:4px}
     <div class="rv" style="display:grid;gap:1rem">
       <figure class="plate"><img src="img/anatomy.jpg" width="632" height="363" alt="Technical drawing of the Zones One pneumatic base with insole, bottom wrap, side wrap, top wrap and a side cross-section of the encapsulated zones"><figcaption>Pneumatic base and cross-section detail</figcaption></figure>
       <figure class="plate"><img src="img/insole-zone.jpg" width="499" height="276" alt="Technical drawing of the Insole Zone with Micro Step Technology and heel encapsulation integration"><figcaption>Insole Zone / Heel encapsulation</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="build">
+  <div class="wrap grid">
+    <figure class="plate rv"><img src="img/emblem-quilted.jpg" width="375" height="265" alt="The Z1 emblem in quilted titanium"><figcaption>Quilted finish / Z1 emblem</figcaption></figure>
+    <div class="rv">
+      <div class="eyebrow">The build</div>
+      <h2><span class="ti">Made to be worn hard.</span></h2>
+      <div class="stack">
+        <div><b>Leather and suede outside</b><span>The outer materials of the shoe.</span></div>
+        <div><b>Flex netting inside</b><span>The inner materials use flex netting for venting.</span></div>
+        <div><b>A small 1, all over the front</b><span>On the lower front of the toe box, a small 1 repeats as a pattern.</span></div>
+        <div><b>A look with roots</b><span>Inspired by the classic high-top and low-profile performance silhouettes.</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -286,7 +303,7 @@ footer img{width:120px;border-radius:4px}
 <footer>
   <div class="wrap">
     <img src="img/emblem-brushed.jpg" width="245" height="192" alt="Z1 Zones emblem">
-    <div>Zones One. AdaptStep technology. Pre-launch concept, designs shown are technical drawings and renders.<br>Contact: <a href="mailto:dynamiccloser@gmail.com">dynamiccloser@gmail.com</a></div>
+    <div>Zones One. AdaptStep technology. Pre-launch. Designs shown are technical drawings and renders.<br>Contact: <a href="mailto:dynamiccloser@gmail.com">dynamiccloser@gmail.com</a></div>
     <div>&copy; Zones One</div>
   </div>
 </footer>
@@ -296,40 +313,40 @@ footer img{width:120px;border-radius:4px}
 (function(){
 var T=[
 {k:'1',tab:'AdaptStep quilted pneumatic system',formal:'AdaptStep Quilted Pneumatic System & Thermal Dissipation Insole',
- title:'Quilted air, layer by layer.',
- text:'A diamond triple-stitched quilt sits over a layered insole. Air cells inside inflate, and the layers around them are drawn to cool and cushion.',
+ title:'An air blanket that lines the whole shoe.',
+ text:'AdaptStep is a kevlar quilted air blanket that lines the complete interior of the shoe. It conforms to your foot and supports as needed. The inner materials use flex netting for venting.',
  img:'img/render-1.jpg',
  pts:[
   {x:71,y:30,n:'1',t:'Diamond Triple-Stitched Quilt Pattern',d:'Black and white checkerboard quilting, as drawn.'},
   {x:71,y:38,n:'2',t:'Reinforced Kevlar Mesh Layer',d:'A reinforcing mesh layer, as noted in the drawing.'},
-  {x:71,y:47,n:'3',t:'Core Interlinked Airflow Cells (Inflated)',d:'The inflating air cells at the core of the layer stack.'},
-  {x:71,y:57,n:'4',t:'Cooling Memory Foam Layer',d:'A memory foam layer, drawn as part of thermal dissipation.'},
+  {x:71,y:47,n:'3',t:'Core Interlinked Airflow Cells (Inflated)',d:'The inflating air cells at the core of the layer stack, as drawn.'},
+  {x:71,y:57,n:'4',t:'Cooling Memory Foam Layer',d:'A memory foam layer, as drawn in the thermal dissipation insole.'},
   {x:71,y:66,n:'5',t:'Gel-Infused Impact Zone',d:'The impact zone at the bottom of the stack.'}]},
 {k:'2',tab:'Dynamic air valve system',formal:'Dynamic Air Valve System (Action & Mold Creation)',
- title:'Press. Inflate. Mold.',
- text:'One seamless molded valve. Depress it to inflate. Air moves through micro-cells in sequence and creates a custom mold of the foot. A locking pressure holds it.',
+ title:'Pump it up. Release it. Your call.',
+ text:'A sleek built-in valve pump sits on the outer upper, outside the shoe, for easy access. Pump up and release air depending on your needs and comfort. The drawings show the valve pressed to inflate.',
  img:'img/render-2.jpg',
  pts:[
   {x:26,y:50,n:'1',t:'Valve Actuation',d:'Depress to inflate.'},
-  {x:78,y:42,n:'2',t:'Seamless molded air valve',d:'The valve itself, drawn as one molded piece.'},
+  {x:78,y:42,n:'2',t:'Seamless molded air valve',d:'The sleek built-in valve pump, drawn as one molded piece on the outer upper.'},
   {x:83,y:50,n:'3',t:'Sequential Micro-Cell Inflation Flow',d:'Creates the custom mold, one cell after another.'},
   {x:82,y:76,n:'4',t:'Locking Pressure',d:'The chart plots air pressure against custom foot shape, labeled mold retention.'}]},
 {k:'3',tab:'Stitched fixed tongue and ankle support',formal:'Stitched Fixed Tongue & Ankle Support (Material Stability)',
- title:'A tongue that stays where you put it.',
- text:'The tongue is stitched permanently to the inner structure so it does not move. Lacing loops anchor through the quilted layer for a stable upper.',
+ title:'A sewn tongue that holds the form.',
+ text:'The tongue is sewn in to help with the form of the inner quilted portion. The drawings show it stitched permanently to the inner structure, with lacing loops anchored through the quilted layer.',
  img:'img/render-3.jpg',
  pts:[
   {x:50,y:21,n:'1',t:'Tongue Stitched Permanently',d:'Fixed to the inner structure. Non-moving.'},
   {x:56,y:34,n:'2',t:'Reinforced Flex Point',d:'For entry and exit.'},
   {x:62,y:33,n:'3',t:'Kevlar-Anchor Points',d:'For the upper lacing loops, passing through the quilted layer.'}]},
 {k:'4',tab:'Heel stability and relocated towing indent',formal:'Heel Stability, Variable Lacing, and Relocated Towing Indent',
- title:'A heel that holds.',
- text:'The rear of the shoe gets its own air pocket, divider walls and a stability counter, with a full heel-ankle mold formation.',
+ title:'A heel that holds, and an easy exit.',
+ text:'The rear of the shoe gets its own air pocket and divider walls, drawn with a stability counter. A toe-in on the rear lower helps you take the shoe off using your other toe.',
  img:'img/render-4.jpg',
  pts:[
   {x:18,y:64,n:'1',t:'Lower Rear Air Pocket',d:'A clear, translucent chamber at the lower rear.'},
   {x:15,y:79,n:'2',t:'Micro-Cell Divider Walls',d:'Divide the rear air pocket into cells.'},
-  {x:66,y:25,n:'3',t:'Relocated Towing Indent',d:'An ergonomic grip groove, integrated in the midsole.'},
+  {x:66,y:25,n:'3',t:'Relocated Towing Indent',d:'The toe-in on the rear lower. It helps you take the shoe off using your other toe. Drawn as an ergonomic grip groove.'},
   {x:68,y:48,n:'4',t:'Tapered Heel Entry Guidance',d:'Guides the foot in at the heel.'},
   {x:88,y:63,n:'5',t:'Custom Mold Formation',d:'Full heel and ankle encapsulation. An enhanced rear stability counter with an embedded Kevlar stabilizer is drawn alongside.'}]}
 ];
@@ -364,7 +381,7 @@ show(0);
 /* reveal on scroll */
 var els=document.querySelectorAll('.rv');
 if('IntersectionObserver' in window){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px -4% 0px'});
   els.forEach(function(e){io.observe(e)});
 }else{els.forEach(function(e){e.classList.add('in')})}
 /* waitlist: honest mailto */
