@@ -118,6 +118,8 @@ form{display:grid;gap:.8rem;text-align:left}
 label{font:600 .8rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 input[type=email]{width:100%;min-height:54px;padding:.9rem 1rem;background:var(--panel);border:1px solid #4a5560;border-radius:4px;color:var(--text);font:400 1rem var(--body)}
 .fine{font-size:.88rem;color:var(--muted);margin-top:.4rem}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.fine a{color:var(--ice)}
 .status{min-height:1.5rem;font-size:.95rem;color:var(--ice)}
 .status.err{color:#ffb4a8}
 .nots{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-top:1.4rem}
@@ -287,12 +289,16 @@ footer img{width:120px;border-radius:4px}
       <div class="eyebrow">Pre-launch</div>
       <h2><span class="ti">Be there at the start.</span></h2>
       <p class="lead">Zones One is not for sale yet. Join the waitlist and be first to hear when there is news. That is the only thing you are signing up for.</p>
-      <form id="wl" novalidate>
+      <form id="wl" action="https://gmail.us7.list-manage.com/subscribe/post" method="POST" novalidate>
+        <input type="hidden" name="u" value="b387c115b616bcd1c32fdaa46">
+        <input type="hidden" name="id" value="9f776157cb">
+        <input type="hidden" name="tags" value="3761704">
+        <div class="hp" aria-hidden="true"><input type="text" name="b_b387c115b616bcd1c32fdaa46_9f776157cb" tabindex="-1" value="" autocomplete="off"></div>
         <label for="em">Your email</label>
-        <input id="em" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
-        <button class="btn" type="submit">Join the Zones One waitlist</button>
+        <input id="em" name="MERGE0" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+        <button class="btn" type="submit" id="wlb">Join the Zones One waitlist</button>
         <div class="status" id="st" role="status" aria-live="polite"></div>
-        <p class="fine">This opens a ready-made email to the Zones One team with your address in it. Press send in your email app to join.</p>
+        <p class="fine">Your email goes on the Zones One waitlist. We will only write to you about Zones One news. If the button does not work, email <a href="mailto:dynamiccloser@gmail.com?subject=Zones%20One%20waitlist&amp;body=Add%20me%20to%20the%20Zones%20One%20waitlist.">dynamiccloser@gmail.com</a> instead.</p>
       </form>
       <div class="nots"><span>No release date yet</span><span>No price yet</span><span>Nothing for sale</span></div>
     </div>
@@ -384,16 +390,17 @@ if('IntersectionObserver' in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px -4% 0px'});
   els.forEach(function(e){io.observe(e)});
 }else{els.forEach(function(e){e.classList.add('in')})}
-/* waitlist: honest mailto */
-var f=document.getElementById('wl'),st=document.getElementById('st');
+/* waitlist: real signup to the Zones One Waitlist tag */
+var f=document.getElementById('wl'),st=document.getElementById('st'),wb=document.getElementById('wlb');
 f.addEventListener('submit',function(ev){
   ev.preventDefault();
   var v=document.getElementById('em').value.trim();
   if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){st.className='status err';st.textContent='Enter a valid email address to continue.';return}
-  var s=encodeURIComponent('Zones One waitlist');
-  var b=encodeURIComponent('Add me to the Zones One waitlist.\n\nMy email: '+v+'\n');
-  st.className='status';st.textContent='Opening your email app. Press send to finish joining.';
-  window.location.href='mailto:dynamiccloser@gmail.com?subject='+s+'&body='+b;
+  wb.disabled=true;st.className='status';st.textContent='Adding you to the waitlist...';
+  var body=new URLSearchParams(new FormData(f)).toString();
+  fetch(f.action,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body})
+   .then(function(){st.className='status';st.textContent='You are on the Zones One waitlist. Thank you.';f.reset();wb.textContent='You are on the list';})
+   .catch(function(){wb.disabled=false;st.className='status err';st.textContent='Could not reach the signup right now. Try again, or email dynamiccloser@gmail.com to join.'});
 });
 })();
 </script>
