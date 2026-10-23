@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch site zip
         run: |
-          curl -sL -o site.zip "https://d08bcfa2-b967-4888-9aa5-43b83b3450eb.usrfiles.com/archives/345002_a2a349ae2a924a8abfbd8a3266722580.zip"
+          curl -sL -o site.zip "https://d08bcfa2-88b9-4967-9ea4-43335e3750eb.usrfiles.com/archives/345002_a2a349ae2a924a26bfbd8a3722580020.zip"
           unzip -o site.zip
           rm site.zip
           touch .nojekyll
