@@ -1,0 +1,23 @@
+name: Publish site
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch site zip
+        run: |
+          curl -sL -o site.zip "https://d08bcfa2-b967-4888-9aa5-43b83b3450eb.usrfiles.com/archives/345002_a2a349ae2a924a8abfbd8a3266722580.zip"
+          unzip -o site.zip
+          rm site.zip
+          touch .nojekyll
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Publish Zones One landing page"
+          git push
