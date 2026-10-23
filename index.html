@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zones One | The shoe that adapts to you</title>
+<meta name="description" content="Zones One and the AdaptStep system. A shoe built to adapt to the foot. Join the pre-launch waitlist.">
+<meta property="og:title" content="Zones One | The shoe that adapts to you">
+<meta property="og:description" content="AdaptStep quilted pneumatic system. Dynamic air valve. Heel stability. Join the waitlist.">
+<meta property="og:image" content="img/hero-shoe.jpg">
+<meta name="theme-color" content="#07080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700;1,800;1,900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07080a; --panel:#0e1115; --panel2:#151a20; --line:#262d36;
+  --text:#e9edf1; --muted:#98a3ae; --ice:#7cc4ff; --ti1:#f4f6f8; --ti2:#9aa5b1; --ti3:#d6dce2;
+  --plate:#dfe7e4;
+  --display:'Exo 2','Arial Black',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 16px/1.55 var(--body);overflow-x:hidden;
+  background-image:radial-gradient(1200px 600px at 80% -10%,#141b24 0,transparent 60%)}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+.ti{background:linear-gradient(180deg,var(--ti1) 10%,var(--ti2) 55%,var(--ti3) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1,h2,h3{font-family:var(--display);font-style:italic;font-weight:800;line-height:1.02;letter-spacing:-.01em}
+h1{font-size:clamp(2.7rem,11vw,6.2rem)}
+h2{font-size:clamp(2rem,7vw,3.8rem)}
+h3{font-size:1.25rem;font-weight:700}
+.eyebrow{font:600 .8rem/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--ice);margin-bottom:1rem;display:flex;align-items:center;gap:.75rem}
+.eyebrow::before{content:"";width:2.2rem;height:2px;background:var(--ice)}
+.lead{color:var(--muted);font-size:1.1rem;max-width:34rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.9rem 1.7rem;border-radius:4px;font:700 1rem/1 var(--display);font-style:italic;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;
+  background:linear-gradient(180deg,#f4f6f8,#aeb8c2);color:#07080a;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(124,196,255,.25)}
+.btn:focus-visible,.tab:focus-visible,.hs:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--ice);outline-offset:3px}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid #4a5560}
+header.top{position:absolute;inset:0 0 auto 0;z-index:5;padding:1rem 0}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center}
+.mark{font:italic 900 1.7rem/1 var(--display);letter-spacing:.02em;text-decoration:none}
+.mark small{font:600 .7rem/1 var(--body);letter-spacing:.3em;color:var(--muted);margin-left:.6rem;font-style:normal}
+header.top .btn{min-height:44px;padding:.6rem 1.1rem;font-size:.85rem}
+/* hero */
+.hero{position:relative;padding:6.5rem 0 3rem;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(70% 60% at 70% 50%,#000,transparent);-webkit-mask-image:radial-gradient(70% 60% at 70% 50%,#000,transparent);pointer-events:none}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:2rem}
+.hero p.lead{margin:1.4rem 0 2rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero-img{position:relative}
+.hero-img img{width:100%;border-radius:6px;-webkit-mask-image:radial-gradient(75% 85% at 50% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(75% 85% at 50% 50%,#000 55%,transparent 100%);filter:saturate(1.05) contrast(1.05)}
+.hero-img .tag{position:absolute;left:4%;bottom:6%;font:600 .72rem/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.pre{display:inline-block;margin-top:1.4rem;font:600 .78rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:.55rem .8rem;border-radius:3px}
+/* marquee */
+.band{border-block:1px solid var(--line);background:var(--panel);overflow:hidden;padding:1rem 0}
+.band div{display:flex;gap:3rem;white-space:nowrap;width:max-content;animation:slide 28s linear infinite;font:italic 800 clamp(1.4rem,5vw,2.4rem)/1 var(--display);text-transform:uppercase;color:#3a444f}
+.band span b{color:var(--ice);font-weight:800}
+@keyframes slide{to{transform:translateX(-50%)}}
+section{padding:4.5rem 0}
+/* explorer */
+.explorer{background:linear-gradient(180deg,var(--bg),#0a0d11)}
+.head{display:grid;gap:1rem;margin-bottom:2rem}
+.tabs{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.6rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.tab{flex:0 0 auto;scroll-snap-align:start;background:var(--panel);color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:.8rem 1rem;min-height:48px;font:600 .85rem/1.2 var(--body);cursor:pointer;text-align:left;max-width:15rem}
+.tab b{display:block;font:italic 800 1.2rem/1 var(--display);color:var(--ice);margin-bottom:.2rem}
+.tab[aria-selected=true]{background:var(--panel2);color:var(--text);border-color:var(--ice)}
+.stage{display:grid;gap:1.5rem;margin-top:1rem}
+.imgbox{position:relative;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#000}
+.imgbox img{width:100%;height:auto}
+.hs{position:absolute;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:2px solid var(--ice);background:rgba(7,8,10,.72);color:var(--ice);font:800 .85rem/1 var(--display);cursor:pointer;display:grid;place-items:center;animation:pulse 2.4s infinite}
+.hs[aria-pressed=true]{background:var(--ice);color:#07080a;animation:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(124,196,255,.55)}70%{box-shadow:0 0 0 12px rgba(124,196,255,0)}100%{box-shadow:0 0 0 0 rgba(124,196,255,0)}}
+.info{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:1.4rem}
+.info h3{margin-bottom:.4rem}
+.info .formal{font:600 .78rem/1.3 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--ice);margin-bottom:.8rem}
+.info p{color:var(--muted)}
+.callout{margin-top:1.1rem;padding:1rem;border-left:3px solid var(--ice);background:var(--panel2);min-height:5.4rem}
+.callout strong{display:block;color:var(--text);margin-bottom:.2rem}
+.callout span{color:var(--muted);font-size:.95rem}
+.legend{margin-top:.9rem;font-size:.85rem;color:var(--muted)}
+.list{list-style:none;margin-top:1rem;display:grid;gap:.5rem}
+.list li{display:flex;gap:.7rem;color:var(--text);font-size:.95rem}
+.list li i{font:italic 800 .95rem/1.55 var(--display);color:var(--ice);min-width:1.4rem}
+/* anatomy */
+.anatomy .grid{display:grid;gap:2rem}
+.plate{background:var(--plate);border-radius:6px;padding:.6rem;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.plate img{border-radius:3px;width:100%}
+.plate figcaption{color:#3b4a47;font:600 .72rem/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:.6rem .3rem .2rem}
+.stack{display:grid;gap:1rem;margin-top:1.4rem}
+.stack div{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--ice);padding:1rem 1.1rem;border-radius:4px}
+.stack b{display:block;font:italic 800 1.05rem/1.2 var(--display);margin-bottom:.15rem}
+.stack span{color:var(--muted);font-size:.95rem}
+/* why */
+.why{background:var(--panel);border-block:1px solid var(--line)}
+.why .rows{display:grid;gap:0;margin-top:2rem}
+.row{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;padding:1.6rem 0;border-top:1px solid var(--line)}
+.row .n{font:italic 900 clamp(2.8rem,10vw,5rem)/.9 var(--display);color:transparent;-webkit-text-stroke:1.5px #55616d}
+.row p{color:var(--muted);margin-top:.4rem;max-width:34rem}
+.board{margin-top:2.5rem}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.8rem;-webkit-overflow-scrolling:touch}
+.rail figure{flex:0 0 min(86%,640px);scroll-snap-align:start;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.rail figcaption{background:var(--panel2);color:var(--muted);font-size:.8rem;padding:.6rem .8rem;letter-spacing:.06em}
+/* movement */
+.movement{position:relative;overflow:hidden}
+.movement .wrap{display:grid;gap:2.2rem;align-items:center}
+.manifesto p{font:italic 700 clamp(1.4rem,5vw,2.1rem)/1.25 var(--display);margin-bottom:.9rem;color:#c9d1d9}
+.manifesto p em{color:var(--ice);font-style:italic}
+.manifesto p.big{font-size:clamp(2rem,8vw,3.6rem);font-weight:900;line-height:1.02;color:var(--text)}
+/* waitlist */
+.waitlist{background:radial-gradient(900px 400px at 50% 0,#14202d,transparent 70%),var(--bg);border-top:1px solid var(--line)}
+.box{max-width:760px;margin-inline:auto;text-align:center}
+.box .eyebrow{justify-content:center}
+.box .lead{margin:1rem auto 1.8rem}
+form{display:grid;gap:.8rem;text-align:left}
+label{font:600 .8rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+input[type=email]{width:100%;min-height:54px;padding:.9rem 1rem;background:var(--panel);border:1px solid #4a5560;border-radius:4px;color:var(--text);font:400 1rem var(--body)}
+.fine{font-size:.88rem;color:var(--muted);margin-top:.4rem}
+.status{min-height:1.5rem;font-size:.95rem;color:var(--ice)}
+.status.err{color:#ffb4a8}
+.nots{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-top:1.4rem}
+.nots span{border:1px solid var(--line);border-radius:3px;padding:.4rem .7rem;font-size:.8rem;color:var(--muted);letter-spacing:.06em}
+footer{border-top:1px solid var(--line);padding:2.5rem 0 4.5rem;color:var(--muted);font-size:.9rem}
+footer .wrap{display:grid;gap:1.2rem;align-items:center}
+footer img{width:120px;border-radius:4px}
+.badge{position:fixed;right:10px;bottom:10px;z-index:20;background:#0e1115cc;border:1px solid var(--line);border-radius:3px;padding:.35rem .6rem;font:600 .68rem/1 var(--body);letter-spacing:.08em;color:var(--muted);text-decoration:none;backdrop-filter:blur(6px)}
+.badge:hover{color:var(--text)}
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.band div,.hs{animation:none}html{scroll-behavior:auto}.btn{transition:none}}
+@media (min-width:860px){
+  section{padding:7rem 0}
+  .hero{padding:7rem 0 4rem}
+  .hero .wrap{grid-template-columns:1fr 1.15fr;align-items:center;gap:2rem}
+  .head{grid-template-columns:1fr 1fr;align-items:end}
+  .stage{grid-template-columns:1.35fr 1fr;align-items:start}
+  .anatomy .grid{grid-template-columns:1.1fr 1fr;align-items:center}
+  .movement .wrap{grid-template-columns:1.3fr .8fr}
+  .tabs{overflow:visible;flex-wrap:wrap}
+  footer .wrap{grid-template-columns:auto 1fr auto}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="mark ti" href="#top" aria-label="Zones One home">Z1<small>ZONES ONE</small></a>
+    <a class="btn ghost" href="#waitlist">Join the waitlist</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:3rem">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Zones One / AdaptStep</div>
+      <h1><span class="ti">The shoe that adapts to you.</span></h1>
+      <p class="lead">Most shoes ask your foot to adapt to them. Zones One flips it. AdaptStep is built to take your shape, hold it, and move with you.</p>
+      <div class="cta">
+        <a class="btn" href="#waitlist">Join the waitlist</a>
+        <a class="btn ghost" href="#tech">See how AdaptStep works</a>
+      </div>
+      <span class="pre">Pre-launch. Not for sale yet.</span>
+    </div>
+    <div class="hero-img rv">
+      <img src="img/hero-shoe.jpg" width="900" height="444" alt="Zones One high-top shoe in black, side view, with the Zones script mark on the ankle panel" fetchpriority="high">
+      <span class="tag">Black colorway / side view</span>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"><div>
+  <span>Press <b>/</b> Inflate <b>/</b> Mold <b>/</b> Lock <b>/</b> Move <b>/</b></span>
+  <span>Press <b>/</b> Inflate <b>/</b> Mold <b>/</b> Lock <b>/</b> Move <b>/</b></span>
+  <span>Press <b>/</b> Inflate <b>/</b> Mold <b>/</b> Lock <b>/</b> Move <b>/</b></span>
+  <span>Press <b>/</b> Inflate <b>/</b> Mold <b>/</b> Lock <b>/</b> Move <b>/</b></span>
+</div></div>
+
+<section class="explorer" id="tech">
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <div class="eyebrow">The technology</div>
+        <h2><span class="ti">AdaptStep, piece by piece.</span></h2>
+      </div>
+      <p class="lead">Four systems from the Zones One technical drawings. Pick one. Tap the numbered points on the shoe to see what each part is called and what it does.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="AdaptStep systems" id="tabs"></div>
+    <div class="stage">
+      <div class="imgbox rv"><img id="stageImg" src="img/render-1.jpg" width="704" height="384" alt=""><div id="hsLayer"></div></div>
+      <div class="info rv">
+        <div class="formal" id="infoFormal"></div>
+        <h3 id="infoTitle"></h3>
+        <p id="infoText"></p>
+        <div class="callout" id="callout" aria-live="polite"><strong>Tap a numbered point</strong><span>Each point is a part named in the Zones One drawings.</span></div>
+        <ul class="list" id="infoList"></ul>
+      </div>
+    </div>
+    <p class="legend">Images are the original Zones One technical breakdown. Labels are as drawn.</p>
+  </div>
+</section>
+
+<section class="anatomy">
+  <div class="wrap grid">
+    <div class="rv">
+      <div class="eyebrow">Under the foot</div>
+      <h2><span class="ti">A base that wraps around you.</span></h2>
+      <p class="lead" style="margin-top:1rem">From the logo and technology spec: an insole zone, and a pneumatic base that wraps the foot in three directions. Drawn as encapsulated zones, seen in side cross-section.</p>
+      <div class="stack">
+        <div><b>Insole Zone</b><span>Micro Step Technology with a fine-grain support matrix.</span></div>
+        <div><b>Bottom Wrap</b><span>The pneumatic base.</span></div>
+        <div><b>Side Wrap</b><span>The supportive wall.</span></div>
+        <div><b>Top Wrap</b><span>The encapsulated upper.</span></div>
+        <div><b>Heel Encapsulation Integration</b><span>The heel is part of the system, not an add-on.</span></div>
+      </div>
+    </div>
+    <div class="rv" style="display:grid;gap:1rem">
+      <figure class="plate"><img src="img/anatomy.jpg" width="632" height="363" alt="Technical drawing of the Zones One pneumatic base with insole, bottom wrap, side wrap, top wrap and a side cross-section of the encapsulated zones"><figcaption>Pneumatic base and cross-section detail</figcaption></figure>
+      <figure class="plate"><img src="img/insole-zone.jpg" width="499" height="276" alt="Technical drawing of the Insole Zone with Micro Step Technology and heel encapsulation integration"><figcaption>Insole Zone / Heel encapsulation</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Why it matters</div>
+      <h2><span class="ti">Adaptability changes the game.</span></h2>
+    </div>
+    <div class="rows">
+      <div class="row rv"><div class="n">01</div><div><h3>Your foot sets the shape.</h3><p>No two feet are the same. AdaptStep is drawn to form a custom mold around yours instead of asking you to settle for a fixed one.</p></div></div>
+      <div class="row rv"><div class="n">02</div><div><h3>The shape stays put.</h3><p>The drawings call for a locking pressure, so the fit you set is the fit you keep. Mold retention is part of the design.</p></div></div>
+      <div class="row rv"><div class="n">03</div><div><h3>One shoe. Every foot.</h3><p>When a shoe adapts, the shoe stops being the limit. You decide the fit. The shoe follows.</p></div></div>
+    </div>
+    <div class="board rv">
+      <div class="eyebrow">From the drawing board</div>
+      <div class="rail" tabindex="0" aria-label="Zones One blueprint sheets, swipe to see all four">
+        <figure><img src="img/blueprint-1.jpg" width="690" height="376" alt="Blueprint: Zones One branding and core AdaptStep system"><figcaption>1. Zones One branding and core AdaptStep system</figcaption></figure>
+        <figure><img src="img/blueprint-2.jpg" width="690" height="376" alt="Blueprint: Dynamic Air Valve System, action and mold"><figcaption>2. Dynamic Air Valve System</figcaption></figure>
+        <figure><img src="img/blueprint-3.jpg" width="690" height="376" alt="Blueprint: stitched fixed tongue and ankle support"><figcaption>3. Stitched Fixed Tongue and Ankle Support</figcaption></figure>
+        <figure><img src="img/blueprint-4.jpg" width="690" height="376" alt="Blueprint: heel stability, variable lacing and relocated towing indent"><figcaption>4. Heel Stability, Variable Lacing, Relocated Towing Indent</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="movement">
+  <div class="wrap">
+    <div class="manifesto rv">
+      <div class="eyebrow">The movement</div>
+      <p class="big ti">This is not another shoe drop.</p>
+      <p>It is the start of something bigger.</p>
+      <p>A shoe that <em>adapts</em> changes the game.</p>
+      <p>A shoe that revolutionizes our future creates a <em>movement</em>.</p>
+      <p>Adapt. Move. Lead. This is the movement of our time.</p>
+    </div>
+    <figure class="plate rv" style="max-width:420px;justify-self:center">
+      <img src="img/emblem-brushed.jpg" width="245" height="192" alt="The Z1 Zones emblem in brushed titanium">
+      <figcaption>The Z1 mark / Brushed titanium finish</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="waitlist" id="waitlist">
+  <div class="wrap">
+    <div class="box rv">
+      <div class="eyebrow">Pre-launch</div>
+      <h2><span class="ti">Be there at the start.</span></h2>
+      <p class="lead">Zones One is not for sale yet. Join the waitlist and be first to hear when there is news. That is the only thing you are signing up for.</p>
+      <form id="wl" novalidate>
+        <label for="em">Your email</label>
+        <input id="em" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+        <button class="btn" type="submit">Join the Zones One waitlist</button>
+        <div class="status" id="st" role="status" aria-live="polite"></div>
+        <p class="fine">This opens a ready-made email to the Zones One team with your address in it. Press send in your email app to join.</p>
+      </form>
+      <div class="nots"><span>No release date yet</span><span>No price yet</span><span>Nothing for sale</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/emblem-brushed.jpg" width="245" height="192" alt="Z1 Zones emblem">
+    <div>Zones One. AdaptStep technology. Pre-launch concept, designs shown are technical drawings and renders.<br>Contact: <a href="mailto:dynamiccloser@gmail.com">dynamiccloser@gmail.com</a></div>
+    <div>&copy; Zones One</div>
+  </div>
+</footer>
+<a class="badge" href="https://www.symphony.co" target="_blank" rel="noopener">Built with Symphony.co</a>
+
+<script>
+(function(){
+var T=[
+{k:'1',tab:'AdaptStep quilted pneumatic system',formal:'AdaptStep Quilted Pneumatic System & Thermal Dissipation Insole',
+ title:'Quilted air, layer by layer.',
+ text:'A diamond triple-stitched quilt sits over a layered insole. Air cells inside inflate, and the layers around them are drawn to cool and cushion.',
+ img:'img/render-1.jpg',
+ pts:[
+  {x:71,y:30,n:'1',t:'Diamond Triple-Stitched Quilt Pattern',d:'Black and white checkerboard quilting, as drawn.'},
+  {x:71,y:38,n:'2',t:'Reinforced Kevlar Mesh Layer',d:'A reinforcing mesh layer, as noted in the drawing.'},
+  {x:71,y:47,n:'3',t:'Core Interlinked Airflow Cells (Inflated)',d:'The inflating air cells at the core of the layer stack.'},
+  {x:71,y:57,n:'4',t:'Cooling Memory Foam Layer',d:'A memory foam layer, drawn as part of thermal dissipation.'},
+  {x:71,y:66,n:'5',t:'Gel-Infused Impact Zone',d:'The impact zone at the bottom of the stack.'}]},
+{k:'2',tab:'Dynamic air valve system',formal:'Dynamic Air Valve System (Action & Mold Creation)',
+ title:'Press. Inflate. Mold.',
+ text:'One seamless molded valve. Depress it to inflate. Air moves through micro-cells in sequence and creates a custom mold of the foot. A locking pressure holds it.',
+ img:'img/render-2.jpg',
+ pts:[
+  {x:26,y:50,n:'1',t:'Valve Actuation',d:'Depress to inflate.'},
+  {x:78,y:42,n:'2',t:'Seamless molded air valve',d:'The valve itself, drawn as one molded piece.'},
+  {x:83,y:50,n:'3',t:'Sequential Micro-Cell Inflation Flow',d:'Creates the custom mold, one cell after another.'},
+  {x:82,y:76,n:'4',t:'Locking Pressure',d:'The chart plots air pressure against custom foot shape, labeled mold retention.'}]},
+{k:'3',tab:'Stitched fixed tongue and ankle support',formal:'Stitched Fixed Tongue & Ankle Support (Material Stability)',
+ title:'A tongue that stays where you put it.',
+ text:'The tongue is stitched permanently to the inner structure so it does not move. Lacing loops anchor through the quilted layer for a stable upper.',
+ img:'img/render-3.jpg',
+ pts:[
+  {x:50,y:21,n:'1',t:'Tongue Stitched Permanently',d:'Fixed to the inner structure. Non-moving.'},
+  {x:56,y:34,n:'2',t:'Reinforced Flex Point',d:'For entry and exit.'},
+  {x:62,y:33,n:'3',t:'Kevlar-Anchor Points',d:'For the upper lacing loops, passing through the quilted layer.'}]},
+{k:'4',tab:'Heel stability and relocated towing indent',formal:'Heel Stability, Variable Lacing, and Relocated Towing Indent',
+ title:'A heel that holds.',
+ text:'The rear of the shoe gets its own air pocket, divider walls and a stability counter, with a full heel-ankle mold formation.',
+ img:'img/render-4.jpg',
+ pts:[
+  {x:18,y:64,n:'1',t:'Lower Rear Air Pocket',d:'A clear, translucent chamber at the lower rear.'},
+  {x:15,y:79,n:'2',t:'Micro-Cell Divider Walls',d:'Divide the rear air pocket into cells.'},
+  {x:66,y:25,n:'3',t:'Relocated Towing Indent',d:'An ergonomic grip groove, integrated in the midsole.'},
+  {x:68,y:48,n:'4',t:'Tapered Heel Entry Guidance',d:'Guides the foot in at the heel.'},
+  {x:88,y:63,n:'5',t:'Custom Mold Formation',d:'Full heel and ankle encapsulation. An enhanced rear stability counter with an embedded Kevlar stabilizer is drawn alongside.'}]}
+];
+var tabs=document.getElementById('tabs'),img=document.getElementById('stageImg'),layer=document.getElementById('hsLayer'),
+ co=document.getElementById('callout'),cur=0;
+T.forEach(function(s,i){
+  var b=document.createElement('button');b.className='tab';b.type='button';b.setAttribute('role','tab');b.setAttribute('aria-selected',i===0);
+  b.innerHTML='<b>'+s.k+'</b>'+s.tab;b.addEventListener('click',function(){show(i)});tabs.appendChild(b)});
+function show(i){
+  cur=i;var s=T[i];
+  [].forEach.call(tabs.children,function(c,j){c.setAttribute('aria-selected',j===i)});
+  img.src=s.img;img.alt='Zones One '+s.tab+' technical render, with numbered callouts';
+  document.getElementById('infoFormal').textContent=s.formal;
+  document.getElementById('infoTitle').textContent=s.title;
+  document.getElementById('infoText').textContent=s.text;
+  co.innerHTML='<strong>Tap a numbered point</strong><span>Each point is a part named in the Zones One drawings.</span>';
+  layer.innerHTML='';
+  var ul=document.getElementById('infoList');ul.innerHTML='';
+  s.pts.forEach(function(p,j){
+    var h=document.createElement('button');h.className='hs';h.type='button';h.style.left=p.x+'%';h.style.top=p.y+'%';h.textContent=p.n;
+    h.title=p.t;h.setAttribute('aria-label',p.n+': '+p.t);h.setAttribute('aria-pressed','false');
+    h.addEventListener('click',function(){pick(j)});h.addEventListener('mouseenter',function(){pick(j,true)});
+    layer.appendChild(h);
+    var li=document.createElement('li');li.innerHTML='<i>'+p.n+'</i><span>'+p.t+'</span>';ul.appendChild(li)});
+}
+function pick(j,soft){
+  var p=T[cur].pts[j];
+  [].forEach.call(layer.children,function(c,k){c.setAttribute('aria-pressed',k===j)});
+  co.innerHTML='';var a=document.createElement('strong');a.textContent=p.n+'. '+p.t;var b=document.createElement('span');b.textContent=p.d;co.appendChild(a);co.appendChild(b);
+}
+show(0);
+/* reveal on scroll */
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+}else{els.forEach(function(e){e.classList.add('in')})}
+/* waitlist: honest mailto */
+var f=document.getElementById('wl'),st=document.getElementById('st');
+f.addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var v=document.getElementById('em').value.trim();
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){st.className='status err';st.textContent='Enter a valid email address to continue.';return}
+  var s=encodeURIComponent('Zones One waitlist');
+  var b=encodeURIComponent('Add me to the Zones One waitlist.\n\nMy email: '+v+'\n');
+  st.className='status';st.textContent='Opening your email app. Press send to finish joining.';
+  window.location.href='mailto:dynamiccloser@gmail.com?subject='+s+'&body='+b;
+});
+})();
+</script>
+</body>
+</html>
